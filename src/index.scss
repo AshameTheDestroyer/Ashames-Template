@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind variants;
+@tailwind utilities;
+@tailwind components;
+
+@font-face {
+    font-family: CascadiaCode;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Cascadia Code"), url("https://fonts.cdnfonts.com/s/29131/Cascadia.woff") format("woff");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-colour: #00D647;
+    --background-colour: #222;
+    --background-darker-colour: #111;
+    --fore-colour: #FFF;
+    --fore-darker-colour: #999;
+    --half-transparent: #0000007C;
+    --best-bezier-curve: cubic-bezier(0.15, 0.95, 0.3, 1.5);
+
+    --main-colour-filter: invert(40%) sepia(40%) saturate(3678%) hue-rotate(98deg) brightness(99%) contrast(105%);
+
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Cascadia Code", CascadiaCode, Consolas, Arial;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+
+    color: var(--fore-colour);
+    background-color: var(--background-colour);
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--half-transparent);
+}
+
+*:not(body)::-webkit-scrollbar-track {
+    outline: 0.3rem solid var(--half-transparent);
+    border-radius: 100rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-colour);
+
+    border: 0.2rem solid var(--half-transparent);
+    border-radius: 100vh;
+}
