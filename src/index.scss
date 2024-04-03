@@ -15,16 +15,6 @@ html {
 }
 
 :root {
-    --main-colour: #00D647;
-    --background-colour: #222;
-    --background-darker-colour: #111;
-    --fore-colour: #FFF;
-    --fore-darker-colour: #999;
-    --half-transparent: #0000007C;
-    --best-bezier-curve: cubic-bezier(0.15, 0.95, 0.3, 1.5);
-
-    --main-colour-filter: invert(40%) sepia(40%) saturate(3678%) hue-rotate(98deg) brightness(99%) contrast(105%);
-
     font-size: 62.5%;
 }
 
@@ -35,29 +25,21 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 
-    margin: 0;
-
-    color: var(--fore-colour);
-    background-color: var(--background-colour);
+    @apply text-white bg-neutral-900;
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
-    height: 1rem;
+    @apply size-3;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--half-transparent);
+    @apply bg-black/50;
 }
 
 *:not(body)::-webkit-scrollbar-track {
-    outline: 0.3rem solid var(--half-transparent);
-    border-radius: 100rem;
+    @apply outline-[3px] outline-black/50 rounded-[100rem];
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-colour);
-
-    border: 0.2rem solid var(--half-transparent);
-    border-radius: 100vh;
+    @apply bg-emerald-600 border-2 border-black/50 rounded-[100rem];
 }

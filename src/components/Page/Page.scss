@@ -1,8 +1,11 @@
 .page {
     --padding: 4rem;
 
-    min-height: calc(100vh - var(--padding) * 2);
-    min-height: calc(100dvh - var(--padding) * 2);
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
 
     padding: var(--padding);
 }

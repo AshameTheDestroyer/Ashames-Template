@@ -6,7 +6,8 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import "./index.scss";
 
 import "./constants/Extensions.ts";
-import Store from "./store/Store.ts";
+
+import Store from "./Store.ts";
 import Home from "./pages/Home/Home";
 
 type MainStateProps = {};
