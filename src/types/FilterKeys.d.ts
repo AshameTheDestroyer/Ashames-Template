@@ -4,4 +4,5 @@ type FilterKeys<T, Condition> = {
 
 type PickByCondition<T, Condition> = Pick<T, FilterKeys<T, Condition>>;
 type OmitByCondition<T, Condition> = Omit<T, FilterKeys<T, Condition>>;
+
 type NonNullableKeys<T> = OmitByCondition<T, null | undefined>;
