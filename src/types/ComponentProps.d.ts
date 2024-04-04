@@ -1,3 +1,5 @@
+import React from "react";
+
 type ComponentProps = {
     id?: string;
     className?: string;
